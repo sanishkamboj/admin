@@ -16,7 +16,10 @@ $(document).on('click', '#login-form-btn', function () {
 			},
 			messages: {
 
-				email: "Please enter email",
+				email: {
+                        required: "Please enter your email.",
+                        email: "Please enter valid email address."                
+                    },
 				password: "Please enter password",
 				
 
@@ -38,15 +41,13 @@ $(document).on('click', '#login-form-btn', function () {
 			},
 			errorPlacement: function (error, element) {
 				error.insertAfter(element);
-				if ($(element).prop('name') == "Description") {
-					var id = "Id_" + $(element).prop('id');
-					$("#" + id).addClass("has-error");
-				} else {
+				
 					element.addClass('has-error');
-				}
+				
 			},
 			submitHandler: function (form) {
-				form.submit()
+				//form.submit()
+				//event.preventDefault()
 			}
 		});
 	});

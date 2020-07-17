@@ -52,7 +52,7 @@ class GenreController extends Controller
                         $data['banner_image'] = $fileName;
                     } else {
                         
-                        $request->session()->put('postedData', $postData);
+                        //$request->session()->put('postedData', $postData);
                         unset($postData['b_simage']);
                         return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
                     }
@@ -76,7 +76,7 @@ class GenreController extends Controller
                         $data['cover_image'] = $fileName;
                     } else {
                         
-                        $request->session()->put('postedData', $postData);
+                        //$request->session()->put('postedData', $postData);
                         unset($postData['c_simage']);
                         return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
                     }
@@ -130,7 +130,7 @@ class GenreController extends Controller
                         $data['banner_image'] = $fileName;
                     } else {
                         
-                        $request->session()->put('postedData', $postData);
+                        //$request->session()->put('postedData', $postData);
                         unset($postData['b_simage']);
                         return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
                     }
@@ -154,7 +154,7 @@ class GenreController extends Controller
                         $data['cover_image'] = $fileName;
                     } else {
                         
-                        $request->session()->put('postedData', $postData);
+                        //$request->session()->put('postedData', $postData);
                         unset($postData['c_simage']);
                         return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
                     }
