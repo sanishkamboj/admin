@@ -22,7 +22,7 @@
                                     <form action="" method="get">
                                         <div class="input-group">
                                             <input type="text" name="q" id="search-query" data-page="clientpage" value="{{$key}}" class="form-control search-input"
-                                                placeholder="Search..." />
+                                                placeholder="Search..." required />
                                             <span class="uil uil-search icon-search"></span>
                                             <div class="input-group-append">
                                                 <button class="btn btn-soft-primary" id="search-client-btn" type="submit">
