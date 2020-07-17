@@ -29,7 +29,7 @@
 											<div class="row">
 												<div class="col-lg-4 col-md-6 col-12">
 													<div class="form-group">
-														<label>Banner Image<span class="required">*</span></label>
+														<label>Banner Image</label>
 														<input type="file" name="b_image" id="b_image" class="form-control"  />
 														@if(!is_null($record->banner_image))
 														<img src="{{ asset('uploads/'.$record->banner_image)}}" width="50%" />
@@ -40,7 +40,7 @@
 											<div class="row">
 												<div class="col-lg-4 col-md-6 col-12">
 													<div class="form-group">
-														<label>Cover Image<span class="required">*</span></label>
+														<label>Cover Image</label>
 														<input type="file" name="c_image" id="b_image" class="form-control"  />
 														@if(!is_null($record->cover_image))
 															<img src="{{ asset('uploads/'.$record->cover_image)}}" width="50%" />
