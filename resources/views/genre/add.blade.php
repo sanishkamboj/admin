@@ -15,7 +15,7 @@
 										Create Genre
 										<a href="{{route('genre.list')}}" class="float-right"><i data-feather="x"></i></a>					
 									</h5>
-									<form action="{{route('genre.create')}}" method="post" enctype="multipart/form-data">
+									<form action="{{route('genre.create')}}" method="post" id="add_genre_form" enctype="multipart/form-data">
 										@csrf
 												
 											<div class="row">
@@ -38,7 +38,7 @@
 												<div class="col-lg-4 col-md-6 col-12">
 													<div class="form-group">
 														<label>Cover Image<span class="required">*</span></label>
-														<input type="file" name="c_image" id="b_image" class="form-control" required />
+														<input type="file" name="c_image" id="c_image" class="form-control" required />
 													</div>
 												</div>
 											</div>
@@ -55,7 +55,7 @@
 						
                                   		<div class="mt-1 mb-1">
 											<div class="text-left d-print-none mt-4">
-												<button type="submit" class="btn btn-primary">Save</button>
+												<button type="submit" id="save-genre-btn" class="btn btn-primary">Save</button>
 												<a href="{{route('genre.list')}}" class="btn btn-light">Cancel</a>
 											</div>
 											

@@ -15,7 +15,7 @@
 										Create Genre
 										<a href="{{route('genre.list')}}" class="float-right"><i data-feather="x"></i></a>					
 									</h5>
-									<form action="{{route('genre.update')}}" method="post" enctype="multipart/form-data">
+									<form action="{{route('genre.update')}}" method="post" id="edit_genre_form" enctype="multipart/form-data">
 										@csrf
 											<input type="hidden" name="edit_record_id" value="{{$record->id}}">	
 											<div class="row">
@@ -32,7 +32,9 @@
 														<label>Banner Image</label>
 														<input type="file" name="b_image" id="b_image" class="form-control"  />
 														@if(!is_null($record->banner_image))
-														<img src="{{ asset('uploads/'.$record->banner_image)}}" width="50%" />
+														<div>
+															<img src="{{ asset('uploads/'.$record->banner_image)}}" width="50%" />
+														</div>
 														@endif
 													</div>
 												</div>
@@ -43,7 +45,9 @@
 														<label>Cover Image</label>
 														<input type="file" name="c_image" id="b_image" class="form-control"  />
 														@if(!is_null($record->cover_image))
+														<div>
 															<img src="{{ asset('uploads/'.$record->cover_image)}}" width="50%" />
+														</div>
 														@endif
 													</div>
 												</div>
@@ -61,7 +65,7 @@
 						
                                   		<div class="mt-1 mb-1">
 											<div class="text-left d-print-none mt-4">
-												<button type="submit" class="btn btn-primary">Update</button>
+												<button type="submit" id="edit-genre-btn" class="btn btn-primary">Update</button>
 												<a href="{{route('genre.list')}}" class="btn btn-light">Cancel</a>
 											</div>
 											

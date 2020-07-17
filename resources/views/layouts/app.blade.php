@@ -86,6 +86,14 @@
          <!-- Plugins js -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="{{ asset('assets/js/bootstrap-datepicker.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+        
+        
+
+        //Genre Js
+        <script src="{{ asset('assets/js/genre/add-genre.js') }}"></script>
+        <script src="{{ asset('assets/js/genre/edit-genre.js') }}"></script>
        
 
 
