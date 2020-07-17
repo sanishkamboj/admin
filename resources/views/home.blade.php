@@ -29,7 +29,7 @@
                                     <div class="card-body p-0">
                                         <div class="media p-3">
                                             <div class="media-body">
-                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total <a href="{{route('artist.list')}}">Artists</a>
+                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total <a href="{{route('user.artists')}}">Artists</a>
                                                     </span>
                                                 <h2 class="mb-0">{{count($artists)}}</h2>
                                             </div>
