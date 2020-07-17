@@ -15,8 +15,8 @@
                                     <div class="card-body p-0">
                                         <div class="media p-3">
                                             <div class="media-body">
-                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total Users
-                                                    </span>
+                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total <a href="{{route('user.list')}}">Users
+                                                    </a></span>
                                                 <h2 class="mb-0">{{count($customers)}}</h2>
                                             </div>
                                             
@@ -29,7 +29,7 @@
                                     <div class="card-body p-0">
                                         <div class="media p-3">
                                             <div class="media-body">
-                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total Artists
+                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total <a href="{{route('artist.list')}}">Artists</a>
                                                     </span>
                                                 <h2 class="mb-0">{{count($artists)}}</h2>
                                             </div>
@@ -44,7 +44,7 @@
                                     <div class="card-body p-0">
                                         <div class="media p-3">
                                             <div class="media-body">
-                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total Genres</span>
+                                                <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total <a href="{{route('genre.list')}}">Genres</a></span>
                                                 <h2 class="mb-0">{{count($genres)}}</h2>
                                             </div>
                                             
