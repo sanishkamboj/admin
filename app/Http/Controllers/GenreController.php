@@ -35,10 +35,10 @@ class GenreController extends Controller
         			'created_at' => date('Y-m-d H:i:s')
 
         	);
-            if($request->hasFile('image'))
+            if($request->hasFile('b_image'))
             {
                 $allowedfileExtension=['jpg','png'];
-                $file = $request->file('image');
+                $file = $request->file('b_image');
                 //dd($file);
                
                     $filename = $file->getClientOriginalName();
@@ -49,11 +49,35 @@ class GenreController extends Controller
                     {
                         $fileName = md5($filename).'.'.$extension; 
                         $file->move(public_path('uploads'), $fileName);
-                        $data['image'] = $fileName;
+                        $data['banner_image'] = $fileName;
                     } else {
                         
                         $request->session()->put('postedData', $postData);
-                        unset($postData['image']);
+                        unset($postData['b_simage']);
+                        return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
+                    }
+                
+                //die;
+            }
+            if($request->hasFile('c_image'))
+            {
+                $allowedfileExtension=['jpg','png'];
+                $file = $request->file('c_image');
+                //dd($file);
+               
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $check=in_array($extension,$allowedfileExtension);
+                    //dd($check);
+                    if($check)
+                    {
+                        $fileName = md5($filename).'.'.$extension; 
+                        $file->move(public_path('uploads'), $fileName);
+                        $data['cover_image'] = $fileName;
+                    } else {
+                        
+                        $request->session()->put('postedData', $postData);
+                        unset($postData['c_simage']);
                         return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
                     }
                 
@@ -82,18 +106,66 @@ class GenreController extends Controller
     	DB::beginTransaction();
     	try {
         	$postData = $request->all();
+            //dd($postData);
         	$data = array(
         			'name' => $postData['name'],
         			'description' => $postData['Description'],
         			'created_at' => date('Y-m-d H:i:s')
 
         	);
-
+            if($request->hasFile('b_image'))
+            {
+                $allowedfileExtension=['jpg','png'];
+                $file = $request->file('b_image');
+                //dd($file);
+               
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $check=in_array($extension,$allowedfileExtension);
+                    //dd($check);
+                    if($check)
+                    {
+                        $fileName = md5($filename).'.'.$extension; 
+                        $file->move(public_path('uploads'), $fileName);
+                        $data['banner_image'] = $fileName;
+                    } else {
+                        
+                        $request->session()->put('postedData', $postData);
+                        unset($postData['b_simage']);
+                        return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
+                    }
+                
+                //die;
+            }
+            if($request->hasFile('c_image'))
+            {
+                $allowedfileExtension=['jpg','png'];
+                $file = $request->file('c_image');
+                //dd($file);
+               
+                    $filename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $check=in_array($extension,$allowedfileExtension);
+                    //dd($check);
+                    if($check)
+                    {
+                        $fileName = md5($filename).'.'.$extension; 
+                        $file->move(public_path('uploads'), $fileName);
+                        $data['cover_image'] = $fileName;
+                    } else {
+                        
+                        $request->session()->put('postedData', $postData);
+                        unset($postData['c_simage']);
+                        return redirect()->back()->with('status', 'error')->with('message', 'Please select png or jpg images.');
+                    }
+                
+                //die;
+            }
         	
 			$record = Genre::where('id', $postData['edit_record_id'])->update($data);
 			DB::commit();
         	
-        		return redirect()->back()->with('status', 'success')->with('message', 'Genre Updated Successfully');
+        	return redirect()->back()->with('status', 'success')->with('message', 'Genre Updated Successfully');
         	
         } catch ( \Exception $e ) {
             DB::rollback();

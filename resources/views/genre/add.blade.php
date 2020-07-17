@@ -29,8 +29,16 @@
 											<div class="row">
 												<div class="col-lg-4 col-md-6 col-12">
 													<div class="form-group">
-														<label>Image<span class="required">*</span></label>
-														<input type="file" name="image" id="image" class="form-control" required />
+														<label>Banner Image<span class="required">*</span></label>
+														<input type="file" name="b_image" id="b_image" class="form-control" required />
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4 col-md-6 col-12">
+													<div class="form-group">
+														<label>Cover Image<span class="required">*</span></label>
+														<input type="file" name="c_image" id="b_image" class="form-control" required />
 													</div>
 												</div>
 											</div>

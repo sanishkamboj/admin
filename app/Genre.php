@@ -9,7 +9,8 @@ class Genre extends Model
     //
     public $timestamps = false;
     protected $fillable = [
-    			'image',
+    			'banner_image',
+                'cover_image',
        			'name',
 	    		'description',
 	    		'is_deleted',

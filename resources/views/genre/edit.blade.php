@@ -15,7 +15,7 @@
 										Create Genre
 										<a href="{{route('genre.list')}}" class="float-right"><i data-feather="x"></i></a>					
 									</h5>
-									<form action="{{route('genre.update')}}" method="post">
+									<form action="{{route('genre.update')}}" method="post" enctype="multipart/form-data">
 										@csrf
 											<input type="hidden" name="edit_record_id" value="{{$record->id}}">	
 											<div class="row">
@@ -23,6 +23,28 @@
 													<div class="form-group">
 														<label>Name<span class="required">*</span></label>
 														<input type="text" name="name" id="name" class="form-control" value="{{$record->name}}" required />
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4 col-md-6 col-12">
+													<div class="form-group">
+														<label>Banner Image<span class="required">*</span></label>
+														<input type="file" name="b_image" id="b_image" class="form-control"  />
+														@if(!is_null($record->banner_image))
+														<img src="{{ asset('uploads/'.$record->banner_image)}}" width="50%" />
+														@endif
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4 col-md-6 col-12">
+													<div class="form-group">
+														<label>Cover Image<span class="required">*</span></label>
+														<input type="file" name="c_image" id="b_image" class="form-control"  />
+														@if(!is_null($record->cover_image))
+															<img src="{{ asset('uploads/'.$record->cover_image)}}" width="50%" />
+														@endif
 													</div>
 												</div>
 											</div>
