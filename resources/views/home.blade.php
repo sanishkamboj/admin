@@ -17,7 +17,7 @@
                                             <div class="media-body">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total Users
                                                     </span>
-                                                <h2 class="mb-0"><a href="{{route('user.list')}}">{{count($customers)}}</a></h2>
+                                                <h2 class="mb-0">{{count($customers)}}</h2>
                                             </div>
                                             
                                         </div>
@@ -31,7 +31,7 @@
                                             <div class="media-body">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total Artists
                                                     </span>
-                                                <h2 class="mb-0"><a href="{{route('user.artists')}}">{{count($artists)}}</a></h2>
+                                                <h2 class="mb-0">{{count($artists)}}</h2>
                                             </div>
                                             
                                         </div>
