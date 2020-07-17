@@ -1319,6 +1319,9 @@ ul.gestureDropdown{
 	max-height: 170px;
 	overflow: auto;
 }
+.auth-page-sidebar{
+  background-image:url(../images/login.jpg);
+}
 @media (max-width:991px) {
   .invoiceLogo {
     width: 100%;

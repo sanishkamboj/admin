@@ -2,7 +2,7 @@
             <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
                 <div class="container-fluid">
                     <!-- LOGO -->
-                    <a href="/" class="navbar-brand mr-0 mr-md-2 logo">
+                    <a href="{{route('user.home')}}" class="navbar-brand mr-0 mr-md-2 logo">
                         <span class="logo-lg">
                             <img src="{{ asset('assets/images/logo.png') }}" alt="" height="40" />
                         </span>

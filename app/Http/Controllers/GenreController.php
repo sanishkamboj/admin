@@ -87,7 +87,7 @@ class GenreController extends Controller
 			$record = Genre::create($data);
 			DB::commit();
         	if($record){
-        		return redirect()->back()->with('status', 'success')->with('message', 'Genre Created Successfully');
+        		return redirect('genre.list')->with('status', 'success')->with('message', 'Genre Created Successfully');
         	}
         } catch ( \Exception $e ) {
             DB::rollback();
@@ -165,7 +165,7 @@ class GenreController extends Controller
 			$record = Genre::where('id', $postData['edit_record_id'])->update($data);
 			DB::commit();
         	
-        	return redirect()->back()->with('status', 'success')->with('message', 'Genre Updated Successfully');
+        	return redirect('genre.list')->with('status', 'success')->with('message', 'Genre Updated Successfully');
         	
         } catch ( \Exception $e ) {
             DB::rollback();
