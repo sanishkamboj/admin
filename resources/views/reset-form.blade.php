@@ -59,7 +59,7 @@
                                                             <i class="icon-dual" data-feather="mail"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email...">
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email..." required />
                                                 </div>
                                             </div>
 

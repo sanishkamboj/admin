@@ -60,7 +60,7 @@
                                                             <i class="icon-dual" data-feather="mail"></i>
                                                         </span>
                                                     </div>
-                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email...">
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email..." required />
                                                 </div>
                                             </div>
 
@@ -74,7 +74,7 @@
                                                         </span>
                                                     </div>
                                                     <input type="password" class="form-control" name="password" id="password"
-                                                        placeholder="Enter your password">
+                                                        placeholder="Enter your password" required />
                                                 </div>
                                             </div>
 
