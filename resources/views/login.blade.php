@@ -17,6 +17,7 @@
             .error{
                 color:red;
                 width: 100%;
+                border: none !important;
             }
             .has-error{
                 border:1px solid red;
@@ -61,7 +62,7 @@
                                             </div>
                                         </div>
 
-                                        <form action="{{route('user.login')}}" method="post" id="login_form">
+                                        <form action="{{route('user.login')}}" method="post" id="login-form">
                                             @csrf
                                             <div class="form-group">
                                                 <label class="form-control-label">Email Address</label>
@@ -152,7 +153,7 @@
         <!-- App js -->
         <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
         <script src="{{ asset('assets/js/login.js') }}"></script>
         

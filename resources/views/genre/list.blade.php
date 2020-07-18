@@ -57,6 +57,7 @@
                         <tr>
                             
                             <th class="sortcolumn">S.No</th>
+                            <th>Cover Image</th>
                             <th class="sortcolumn">Name</th>
                             <th>Status</th>
                             <th class="sortcolumn">Created At</th>
@@ -70,6 +71,7 @@
                         <tr class="client-table-row">
                             
                             <td>{{$i}}</td>
+                            <td><img src="{{ asset('uploads/'.$row->cover_image)}}" width="70px" /></td>
                             <td>{{$row->name}}</td>
                             <td>@if($row->status == 0)
                                 Disabled
