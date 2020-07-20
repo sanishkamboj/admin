@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 @section('content')
     <div class="container-fluid">
         <div class="row page-title">
@@ -6,10 +6,10 @@
                 <nav aria-label="breadcrumb" class="float-right mt-1">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('user.home')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Genres</li>
+                        <li class="breadcrumb-item active" aria-current="page">Users</li>
                     </ol>
                 </nav>
-                <h4 class="mb-1 mt-0">Genres({{count($records)}})</h4>
+                <h4 class="mb-1 mt-0">Users({{count($users)}})</h4>
             </div>
         </div>
         <div class="row">
@@ -21,8 +21,8 @@
                                 <div class="task-search d-inline-block mb-3 mr-sm-3 searchBox mb-lg-0 mb-sm-3">
                                     <form action="" method="get">
                                         <div class="input-group">
-                                            <input type="text" name="q" id="search-query" data-page="clientpage" value="{{$key}}" class="form-control search-input"
-                                                placeholder="Search..." required />
+                                            <input type="text" name="q" id="search-query" data-page="clientpage" value="" class="form-control search-input"
+                                                placeholder="Search..." />
                                             <span class="uil uil-search icon-search"></span>
                                             <div class="input-group-append">
                                                 <button class="btn btn-soft-primary" id="search-client-btn" type="submit">
@@ -34,11 +34,11 @@
                                 </div>
                                 
                             </div>
-                            <div class="col-sm-3 col-12 text-right">
-                                <!--a href="javascript:void(0)" class="btn btn-success">Import/Export</a-->
+                            <!--div class="col-sm-3 col-12 text-right">
+                                a href="javascript:void(0)" class="btn btn-success">Import/Export</a>
                                 <a href="{{route('genre.add')}}" class="btn btn-primary"><i
                                     class="uil-plus mr-1"></i>Create Genre</a>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                     <!-- end card body-->
@@ -57,9 +57,9 @@
                         <tr>
                             
                             <th class="sortcolumn">S.No</th>
-                            <th>Cover Image</th>
                             <th class="sortcolumn">Name</th>
-                            <th>Status</th>
+                            <th class="sortcolumn">Email</th>
+                            <th class="sortcolumn">Phone</th>
                             <th class="sortcolumn">Created At</th>
                             <th class="sortcolumn">Action</th>
                             
@@ -67,30 +67,19 @@
                     </thead>
                     <tbody>
                         <?php $i=1; ?>
-                        @forelse($records as $row)
+                        @forelse($users as $row)
                         <tr class="client-table-row">
                             
                             <td>{{$i}}</td>
-                            <td><img src="{{ asset('uploads/'.$row->cover_image)}}" width="70px" /></td>
-                            <td>{{$row->name}}</td>
-                            <td>@if($row->status == 0)
-                                Disabled
-                                @else
-                                Enabled
-                                @endif
-                            </td>
+                            <td>{{$row->first_name}} {{$row->last_name}}</td>
+                            <td>{{$row->email}}</td>
+                            <td>{{$row->phone}}</td>
                             <td>{{date('m/d/Y', strtotime($row->created_at))}}</td>
                          
-                            
                             <td>
-                                <a title="Edit" href="{{route('genre.edit',[$row->id])}}" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
+                                <a href="#" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
                            
-                                <a title="Delete" href="{{route('genre.del',[$row->id])}}" onclick="return confirm('Are you sure you want to delete this genre?');" class="tableLink"><i data-feather="trash"></i></a>
-                                @if($row->status == 0)
-                                    <a title="Enable" href="{{route('genre.status',['g' => $row->id, 's' => 1])}}" class="tableLink"><i data-feather="check"></i></a>
-                                @else
-                                    <a title="Disable" href="{{route('genre.status',['g' => $row->id, 's' => 0])}}" class="tableLink"><i data-feather="slash"></i></a>
-                                @endif
+                                <a href="#" class="tableLink"><i data-feather="trash"></i></a>
                             </td>
                         </tr>
                         <?php $i++; ?>

@@ -50,21 +50,21 @@
         <!-- Begin page -->
         <div id="wrapper">
 
-           @include('layouts/topbar')
+           @include('admin/layouts/topbar')
 
-           @include('layouts/leftsidebar')
+           @include('admin/layouts/leftsidebar')
            <div class="content-page">
             <div class="content">
                 <div id="ajax-container">
                     @yield('content')
                 </div>
             </div>
-            @include('layouts/footer')
+            @include('admin/layouts/footer')
            </div>
            
         </div>
         <!-- END wrapper -->
-        @include('layouts/sidebar')
+        @include('admin/layouts/sidebar')
         
         <!-- Vendor js -->
         <script src="{{ asset('assets/js/vendor.min.js') }}"></script>

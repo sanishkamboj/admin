@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
@@ -14,7 +15,7 @@ class AdminController extends Controller
         if(Auth::check()){
             redirect('user/home');
         }
-        return view('login');
+        return view('admin.login');
     }
 
     public function login_user(Request $request){
@@ -42,10 +43,11 @@ class AdminController extends Controller
     }
 
     public function password_reset_form(){
-        return view('reset-form');
+        return view('admin.reset-form');
     }
     public function user_logout(){
         Auth::logout();
         return redirect('login');
     }
 }
+

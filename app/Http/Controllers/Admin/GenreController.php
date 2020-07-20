@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Genre;
 use DB;
@@ -17,11 +18,11 @@ class GenreController extends Controller
     		$records = Genre::where(['is_deleted' => 0])->get();
     	}
     	
-    	return view('genre.list', compact('records', 'key'));
+    	return view('admin.genre.list', compact('records', 'key'));
     }
 
     public function add_form(){
-    	return view('genre.add');
+    	return view('admin.genre.add');
     }
 
     public function create_record(Request $request){
@@ -99,7 +100,7 @@ class GenreController extends Controller
 
     public function edit_form($id){
     	$record = Genre::find($id);
-    	return view('genre.edit', compact('record'));
+    	return view('admin.genre.edit', compact('record'));
     }
 
     public function update_record(Request $request){

@@ -39,7 +39,7 @@
                                 <div class="row">
                                     <div class="col-md-6 p-5">
                                         <div class="mx-auto mb-4">
-                                            <a href="{{route('/')}}">
+                                            <a href="{{route('admin')}}">
                                                 <img src="{{ asset('assets/images/logo.png') }}" alt="" height="40" />
                                             </a>
                                         </div>

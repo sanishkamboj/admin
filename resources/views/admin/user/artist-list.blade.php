@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 @section('content')
     <div class="container-fluid">
         <div class="row page-title">
@@ -6,10 +6,10 @@
                 <nav aria-label="breadcrumb" class="float-right mt-1">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('user.home')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Users</li>
+                        <li class="breadcrumb-item active" aria-current="page">Artist</li>
                     </ol>
                 </nav>
-                <h4 class="mb-1 mt-0">Users({{count($users)}})</h4>
+                <h4 class="mb-1 mt-0">Artists({{count($users)}})</h4>
             </div>
         </div>
         <div class="row">
