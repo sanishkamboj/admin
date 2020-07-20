@@ -48,6 +48,9 @@ class AdminController extends Controller
         $getData = $request->all();
         if(isset($getData['email']) && $getData['email'] != ''){
             $user = Admin::where('email', $getData['email'])->first();
+            if(is_null($user)){
+                return redirect('reset-password')->with('status', 'danger')->with('message', 'Email does not exist.');
+            }
             $user->token = $getData['_token'];
             $user->save();
             $url = route('admin.newpassword', [$getData['_token']]);
