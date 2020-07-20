@@ -17,8 +17,8 @@ class CheckSession
      */
     public function handle($request, Closure $next)
     {
-        if(!Auth::check()){
-            return redirect('login')->with('status', 'warning')->with('message', 'Please login to view page');
+        if(!$request->session()->has('admin')){
+            return redirect('admin')->with('status', 'warning')->with('message', 'Please login to view page');
         }
         return $next($request);
     }

@@ -31,14 +31,22 @@ Auth::routes();
 //Backend Routes
 Route::get('/admin', 'Admin\AdminController@login_form')->name('admin');
 Route::post('user/login', 'Admin\AdminController@login_user')->name('user.login');
-Route::get('reset-password', 'Admin\AdminController@password_reset_form')->name('user.reset');
+Route::get('reset-password', 'Admin\AdminController@password_reset_form')->name('admin.reset');
+Route::get('password-reset/{token}', 'Admin\AdminController@new_password_form')->name('admin.newpassword');
 Route::middleware([CheckSession::class])->group(function () {
 	Route::get('user/home', 'Admin\HomeController@user_home')->name('user.home');
 	Route::get('logout', 'Admin\AdminController@user_logout')->name('logout');
 
 	//User
 	Route::get('user/list', 'Admin\UserController@list_users')->name('user.list');
+	Route::get('user/del/{id}', 'Admin\UserController@del_user')->name('user.del');
+	Route::get('user/edit/{id}', 'Admin\UserController@edit_user')->name('user.edit');
 	Route::get('artist/list', 'Admin\UserController@list_artists')->name('user.artists');
+	Route::get('artist/del/{id}', 'Admin\UserController@del_artist')->name('artist.del');
+	Route::get('artist/edit/{id}', 'Admin\UserController@artist_user')->name('user.artist');
+	Route::get('user/status/update', 'Admin\UserController@change_status')->name('user.status');
+	Route::get('record/edit/{id}', 'Admin\UserController@edit_form')->name('record.edit');
+	Route::post('user/update/{id}', 'Admin\UserController@update_record')->name('user.update');
 
 	//Genre
 	Route::get('genre/list', 'Admin\GenreController@list_records')->name('genre.list');

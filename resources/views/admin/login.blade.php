@@ -78,7 +78,7 @@
 
                                             <div class="form-group md-4">
                                                 <label class="form-control-label">Password</label>
-                                                <a href="{{route('user.reset')}}" class="float-right text-muted text-unline-dashed ml-1">Forgot your password?</a>
+                                                <a href="{{route('admin.reset')}}" class="float-right text-muted text-unline-dashed ml-1">Forgot your password?</a>
                                                 <div class="input-group input-group-merge password">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text">

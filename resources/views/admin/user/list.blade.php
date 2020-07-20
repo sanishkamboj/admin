@@ -60,7 +60,7 @@
                             <th class="sortcolumn">Name</th>
                             <th class="sortcolumn">Email</th>
                             <th class="sortcolumn">Phone</th>
-                            <th class="sortcolumn">Created At</th>
+                            <th class="sortcolumn">Status</th>
                             <th class="sortcolumn">Action</th>
                             
                         </tr>
@@ -74,12 +74,16 @@
                             <td>{{$row->first_name}} {{$row->last_name}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->phone}}</td>
-                            <td>{{date('m/d/Y', strtotime($row->created_at))}}</td>
+                            <td>@if($row->status == 0)
+                                <a title="Click to Enable" href="{{route('user.status',['g' => $row->id, 's' => 1])}}" class="tableLink"><img alt="Click to Enable" src="{{asset('assets/images/off.png')}}" /></a> Disabled
+                                @else
+                                <a title="Click to Disable" href="{{route('user.status',['g' => $row->id, 's' => 0])}}" class="tableLink"><img title="Click to Disable" src="{{asset('assets/images/on.png')}}" /></a> Enabled
+                                @endif</td>
                          
                             <td>
-                                <a href="#" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
+                                <a href="{{route('record.edit', [$row->id])}}" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
                            
-                                <a href="#" class="tableLink"><i data-feather="trash"></i></a>
+                                <a href="{{route('user.del', [$row->id])}}" class="tableLink"><i data-feather="trash-2"></i></a>
                             </td>
                         </tr>
                         <?php $i++; ?>

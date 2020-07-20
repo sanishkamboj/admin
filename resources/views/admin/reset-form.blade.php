@@ -27,7 +27,7 @@
                                 <div class="row">
                                     <div class="col-md-6 p-5">
                                         <div class="mx-auto mb-4">
-                                            <a href="{{route('/')}}">
+                                            <a href="{{route('admin')}}">
                                                 <img src="assets/images/logo.png" alt="" height="40" />
                                             </a>
                                         </div>
@@ -38,7 +38,7 @@
                                             <div class="col-12">
                                                 
                                                 <?php if(\Session::has('status')){ ?>
-                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                <div class="alert alert-{{\Session::get('status')}} alert-dismissible fade show" role="alert">
                                                     <span id="message">{{\Session::get('message')}}</span>
                                                     <button type="button" class="close" data-dismiss="alert"
                                                         aria-label="Close">
@@ -49,10 +49,11 @@
                                             </div>
                                         </div>
 
-                                        <form action="{{route('user.login')}}" method="post">
+                                        <form action="" method="get">
                                             @csrf
                                             <div class="form-group">
                                                 <label class="form-control-label">Email Address</label>
+                                                <a href="{{route('admin')}}" class="float-right text-muted text-unline-dashed ml-1">Login</a>
                                                 <div class="input-group input-group-merge email">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text">
