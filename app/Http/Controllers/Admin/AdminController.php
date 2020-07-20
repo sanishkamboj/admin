@@ -27,14 +27,14 @@ class AdminController extends Controller
             $user = Admin::where('email', $postData['email'])->first();
             if($user){
                 if ( !Hash::check($postData['password'], $user->password) ) {
-                    return redirect('login')->with('status', 'danger')->with('message', 'Enter correct password');
+                    return redirect('admin')->with('status', 'danger')->with('message', 'Enter correct password');
                 } else {
                     $request->session()->put('admin', $user);
                     //Auth::loginUsingId($user->id);
                     return redirect('user/home');
                 }
             } else {
-                return redirect('login')->with('status', 'danger')->with('message', 'Enter enter correct login credentials');
+                return redirect('admin')->with('status', 'danger')->with('message', 'Enter enter correct login credentials');
             }
         } catch ( \Exception $e ) {
             DB::rollback();
