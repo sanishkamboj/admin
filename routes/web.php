@@ -25,7 +25,7 @@ Route::middleware([CheckSession::class])->group(function () {
 
 	//User
 	Route::get('user/list', 'Admin\UserController@list_users')->name('user.list');
-	Route::get('artist/list', 'UserController@list_artists')->name('user.artists');
+	Route::get('artist/list', 'Admin\UserController@list_artists')->name('user.artists');
 
 	//Genre
 	Route::get('genre/list', 'Admin\GenreController@list_records')->name('genre.list');
