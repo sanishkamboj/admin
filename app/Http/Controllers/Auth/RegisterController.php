@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Country;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -42,6 +43,18 @@ class RegisterController extends Controller
     }
 
     /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        $titles = ['Mr' , 'Mrs' , 'Miss', 'Ms', 'Dr'] ;
+        $countries = Country::get(['id','name']);
+        return view('auth.register' , compact('titles', 'countries'));
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -50,7 +63,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -65,9 +78,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'title' =>  $data['title'],
+            'first_name' =>  $data['first_name'],
+            'last_name' =>  $data['last_name'],
+            'street' =>  $data['street'],
+            'city' =>  $data['city'],
+            'country_id' =>  $data['country_id'],
+            'postcode' =>  $data['postcode'],
+            'phone'  =>  $data['phone'],
+            'mobile'  =>  $data['mobile'],
+            'role_id' => $data['role_id'],
+            'email'  =>  $data['email'],
+            'password'  =>  Hash::make($data['password'])
         ]);
     }
 }

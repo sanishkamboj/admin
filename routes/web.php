@@ -15,6 +15,19 @@ use App\Activity;
 use App\Http\Middleware\CheckSession;
 
 
+//Frontend Routes
+
+Route::get('/', function () {
+    return view('welcome');
+}); 
+
+Auth::routes();
+
+
+
+
+
+
 //Backend Routes
 Route::get('/admin', 'Admin\AdminController@login_form')->name('admin');
 Route::post('user/login', 'Admin\AdminController@login_user')->name('user.login');
