@@ -83,9 +83,9 @@
                          
                             
                             <td>
-                                <a title="Click to Edit" href="{{route('genre.edit',[$row->id])}}" class="tableLink action-edit-client"><img src="{{asset('assets/images/edit.png')}}" /></a>
+                                <a title="Click to Edit" href="{{route('genre.edit',[$row->id])}}" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
                            
-                                <a title="Click to Delete" href="{{route('genre.del',[$row->id])}}" onclick="return confirm('Are you sure you want to delete this genre?');" class="tableLink"><img src="{{asset('assets/images/trash.png')}}" /></a>
+                                <a title="Click to Delete" href="{{route('genre.del',[$row->id])}}" onclick="return confirm('Are you sure you want to delete this genre?');" class="tableLink"><i data-feather="trash-2"></i></a>
                                 
                             </td>
                         </tr>

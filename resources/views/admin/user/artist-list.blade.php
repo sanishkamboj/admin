@@ -81,9 +81,9 @@
                                 @endif</td>
                          
                             <td>
-                                <a href="{{route('record.edit', [$row->id])}}" class="tableLink action-edit-client"><img src="{{asset('assets/images/edit.png')}}" /></a>
+                                <a href="{{route('record.edit', [$row->id])}}" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
                            
-                                <a href="{{route('artist.del', [$row->id])}}" class="tableLink"><img src="{{asset('assets/images/trash.png')}}" /></a>
+                                <a href="{{route('artist.del', [$row->id])}}" class="tableLink"><i data-feather="trash-2"></i></a>
                             </td>
                         </tr>
                         <?php $i++; ?>
