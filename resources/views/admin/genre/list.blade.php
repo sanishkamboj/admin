@@ -74,23 +74,19 @@
                             <td><img src="{{ asset('uploads/'.$row->cover_image)}}" width="70px" /></td>
                             <td>{{$row->name}}</td>
                             <td>@if($row->status == 0)
-                                Disabled
+                                <a title="Click to Enable" href="{{route('genre.status',['g' => $row->id, 's' => 1])}}" class="tableLink"><img alt="Click to Enable" src="{{asset('assets/images/off.png')}}" /></a> Disabled
                                 @else
-                                Enabled
+                                <a title="Click to Disable" href="{{route('genre.status',['g' => $row->id, 's' => 0])}}" class="tableLink"><img title="Click to Disable" src="{{asset('assets/images/on.png')}}" /></a> Enabled
                                 @endif
                             </td>
-                            <td>{{date('m/d/Y', strtotime($row->created_at))}}</td>
+                            <td>{{date('F j, Y, g:i a', strtotime($row->created_at))}}</td>
                          
                             
                             <td>
-                                <a title="Edit" href="{{route('genre.edit',[$row->id])}}" class="tableLink action-edit-client"><i data-feather="edit"></i></a>
+                                <a title="Click to Edit" href="{{route('genre.edit',[$row->id])}}" class="tableLink action-edit-client"><img src="{{asset('assets/images/edit.png')}}" /></a>
                            
-                                <a title="Delete" href="{{route('genre.del',[$row->id])}}" onclick="return confirm('Are you sure you want to delete this genre?');" class="tableLink"><i data-feather="trash"></i></a>
-                                @if($row->status == 0)
-                                    <a title="Enable" href="{{route('genre.status',['g' => $row->id, 's' => 1])}}" class="tableLink"><i data-feather="check"></i></a>
-                                @else
-                                    <a title="Disable" href="{{route('genre.status',['g' => $row->id, 's' => 0])}}" class="tableLink"><i data-feather="slash"></i></a>
-                                @endif
+                                <a title="Click to Delete" href="{{route('genre.del',[$row->id])}}" onclick="return confirm('Are you sure you want to delete this genre?');" class="tableLink"><img src="{{asset('assets/images/trash.png')}}" /></a>
+                                
                             </td>
                         </tr>
                         <?php $i++; ?>

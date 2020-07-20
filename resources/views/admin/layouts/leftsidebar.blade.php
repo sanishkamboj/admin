@@ -10,7 +10,7 @@
         @endif
         <div class="media-body">
 
-            <h6 class="pro-user-name mt-0 mb-0">{{ Auth::user()->name }}</h6>
+            <h6 class="pro-user-name mt-0 mb-0">{{ Session::get('admin.name') }}</h6>
             <span class="pro-user-desc">Administrator</span>
         </div>
         
@@ -33,18 +33,18 @@
                         <span> Genres</span>
                     </a>
                 </li>
-                <!--li>
+                <li>
                     <a href="{{route('user.artists')}}">
                         <i data-feather="users"></i>
                         <span> Artists</span>
                     </a>
-                </li-->
-                <!--li>
+                </li>
+                <li>
                     <a href="{{route('user.list')}}">
                         <i data-feather="users"></i>
                         <span> Users</span>
                     </a>
-                </li-->
+                </li>
                 
                         
             </ul>
