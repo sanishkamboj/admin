@@ -1,0 +1,556 @@
+body, h1, h2, h3, h4, h5, h6, a, span, p, strong, input, label, textarea, b { font-family: 'Montserrat', sans-serif; }
+/*==== HEADER SECTION CODE START =====*/
+.main-header .container {
+    max-width: 1200px;
+    padding: 0 15px;
+}
+/*-------------------HEADER SECTION---------------*/
+
+header {
+	/*background-color: #f1f8fe;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	z-index: 9;
+}
+.main-nav {
+	justify-content: flex-end;
+}
+
+input.wpcf7-form-control.wpcf7-submit.btn {
+  font-size: 18px;
+  line-height: 37px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  width: 255px;
+  height: 71px;
+  background-color: #bf9343;
+  border-color: #bf9343;
+  border-radius: 0;
+}
+/*****************************************
+          bottom  Header Section
+*******************************************/
+nav.navbar.navbar-expand-lg.navbar-light {
+	padding: 0;
+}
+.navbar-light .navbar-brand {
+	padding: 0;
+}
+ul.navbar-nav li.nav-item {
+	margin: 0px 7px;
+	position: relative;
+}
+p.anchor a {
+  color: #aaa;
+}
+.navbar-light .navbar-nav .nav-link {
+	border-bottom: 3px solid transparent;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0.02em;
+	transition: all 0.5s ease;
+	padding: 6px 0px !important;
+	margin-right: 5px;
+	text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+	border-bottom: 3px solid #e39656;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+	color: #bf9343;
+	border-color: #7688fc;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus {
+	color: #bf9343;
+}
+
+.r-nav li a img {
+	margin-right: 4px;
+}
+.main-header .dropdown-menu {
+	min-width: 200px;
+	padding: 0;
+	border-radius: 0;
+}
+.main-header a.dropdown-item.dropdown-head {
+	font-size: 14px;
+	letter-spacing: 0px;
+	line-height: 37px;
+	color: #000000;
+	font-weight: 700;
+}
+.main-header .dropdown-divider {
+	margin: 0;
+}
+.main-header a.dropdown-item {
+	font-size: 13px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	color: #000000;
+	font-weight: 500;
+}
+.main-header a.dropdown-item i.fa.fa-chevron-right {
+	font-size: 10px;
+	font-weight: 400;
+}
+.main-header .dropdown-item.active, 
+.main-header .dropdown-item:active,
+.main-header a.dropdown-item.dropdown-head:active{
+  color: #fff;
+  background-color: #bf9343;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.navbar-light .navbar-nav .dropdown-menu  li > a {
+  color: #000;
+  padding: 12px 25px 12px;
+  font-size: 13px;
+  font-weight:500;
+}
+.navbar-light .navbar-nav .dropdown-menu  li:last-child > a {
+  padding: 12px 25px 12px;
+}
+.navbar-light .navbar-nav  .dropdown:hover>.dropdown-menu {
+  right: auto;
+  left: auto;                                                                                                                                                                                                                                                                                                                                                                                       
+}
+.navbar-light .navbar-nav .dropdown-menu li > a:after {
+  display: none;
+}
+.navbar-nav > li > .dropdown-menu {
+  padding: 0;
+}
+.navbar-light .navbar-nav .dropdown-menu li {
+	border-top: 1px solid #ececec;
+}
+.navbar-light a.nav-link.active {
+	border-bottom: 3px solid #e39656;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #444141;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.navbar-nav .btn-primary {
+    margin-left: 40px;
+    vertical-align: middle;
+    padding: 0;
+    border-radius: 3px;
+    filter: drop-shadow(0px 13px 13.5px rgba(0,0,0,0.13));
+    background-color: #0195ff;
+    border: 0;
+}
+.navbar-light .navbar-nav .btn-primary .nav-link {
+    min-width: 118px;
+    padding: 8px 0 0!important;
+    margin: 0;
+    border: 0 none !important;
+    font-size: 13px;
+    letter-spacing: 0px;
+    line-height: normal;
+    color: #ffffff;
+    text-align: center;
+}
+.navbar-light .navbar-nav .btn-primary .dropdown-toggle::after {
+    content: '\f107';
+    border: none;
+    font-family: "FontAwesome";
+    vertical-align: middle;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+
+
+@media (max-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
+    }
+}
+/*==== HEADER SECTION CODE END =====*/
+
+
+
+
+section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.loginSec {
+    background: url(../images/login-banner.jpg) center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    border: 1px solid #fff;
+}
+.iDologin {
+    background-color: #fff;
+    box-shadow: 0px 13px 16px rgba(0,0,0,0.15);
+    width: 100%;
+    border-radius: 10px;
+}
+.loginSec .head {
+    /*background-color: #171a2b;*/
+}
+
+.loginSec .head h2 {
+    font-size: 50px;
+    letter-spacing: -2px;
+    line-height: normal;
+    color: #34383b;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.loginSec .head p {
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #34383b;
+    font-weight: 500;
+    text-align: center;
+}
+
+.iDoinput {
+    padding: 4rem 5rem;
+}
+
+.radiobuttons {
+    display: flex;
+    align-items: center;
+    max-width: 381px;
+    margin: 0 auto;
+}
+.radiobuttons .rdio {
+    position: relative;
+    min-width: 161px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: #e5f4ff;
+    border: 1px solid #0195ff;
+    vertical-align: middle;
+    text-align: left;
+    padding: 8px;
+    margin-right: 12px;
+}
+.radiobuttons .rdio:last-child {
+	background-color: transparent;
+	margin-right: 0;
+}
+.radiobuttons .rdio input[type="radio"] {
+  opacity: 0;
+}
+.radiobuttons .rdio label {
+	padding-left: 10px;
+	cursor: pointer;
+	margin-bottom: 7px !important;
+	font-size: 15px;
+	line-height: normal;
+	color: #000000;
+	font-weight: 500;
+}
+.radiobuttons .rdio label:before {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  content: '';
+  display: inline-block;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #0195ff;
+  background: #fff;
+}
+.radiobuttons .rdio input[type="radio"] {
+  margin: 0px;
+}
+.radiobuttons .rdio input[type="radio"]:disabled + label {
+  color: #999;
+}
+.radiobuttons .rdio input[type="radio"]:disabled + label:before {
+  background-color: #fbc52d;
+}
+.radiobuttons .rdio input[type="radio"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-block;
+  font-size: 11px;
+  width: 10px;
+  height: 10px;
+  background-color: #0195ff;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.radiobuttons .rdio-default input[type="radio"]:checked + label:before {
+  border-color: #0195ff;
+}
+
+.radiobuttons .rdio-primary input[type="radio"]:checked + label:before {
+  border-color: #0195ff;
+}
+.radiobuttons .rdio-primary input[type="radio"]:checked + label::after {
+  background-color: #0195ff;
+}
+
+.form-group input {
+    background-color: transparent;
+    margin-top: 2rem;
+    max-width: 381px;
+    height: 58px;
+    border-radius: 5px;
+    border: 1px solid rgba(107,107,107,0.27);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none !important;
+    font-size: 15px;
+	line-height: 75px;
+	color: #000000;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+}
+.custom-btn {
+    width: 100%;
+    max-width: 381px;
+    border-radius: 5px;
+    box-shadow: 0 0 3.5px rgba(0,0,0,0.5);
+    background-color: #0195ff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 61px;
+    font-size: 15px;
+    line-height: 45px;
+    color: #ffffff;
+    font-weight: 500;
+    box-shadow: none !important;
+}
+.longarrow {
+    font-size: 28px;
+    vertical-align: sub;
+    padding-left: 15px;
+}
+p {
+    color: #6d7a83;
+    font-size: 14px;
+    line-height: 26px;
+}
+.iDoinput p {
+    padding-top: 10px;
+    font-size: 14px;
+	letter-spacing: 0px;
+	line-height: 35px;
+	color: #34383b;
+	font-weight: 500;
+	text-align: left;
+	margin: 0;
+}
+.iDoinput p a {
+	display: inline-block;
+	color: #34383b;
+	text-decoration: none;
+}
+
+.iDobottom {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0;
+}
+.iDobottom p, .iDobottom span {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: normal;
+    color: #34383b;
+    font-weight: 500;
+    text-align: center;
+}
+.iDobottom span a {
+    text-decoration: underline;
+}
+
+
+
+/*============= Register Form Css ============*/
+.Registersec {
+    background: url(../images/Register.jpg) center no-repeat;
+    height: 100%;
+    padding: 100px 0;
+}
+.Registersec .form-group {
+    margin-bottom: 0rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.Register .radiobuttons .rdio {
+    height: 57px;
+    width: 50%;
+}
+.Register .radiobuttons .rdio label {
+    font-size: 16px;
+    line-height: 42px;
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;	
+}
+.Register .radiobuttons .rdio label:before {
+	top: 20px;
+}
+.Register .radiobuttons .rdio input[type="radio"]:checked + label::after {
+	top: 24px;
+}
+.Register .radiobuttons, .Register .form-group input {
+    max-width: 100%;
+}
+.Register .mt {
+    margin-top: 2rem;
+    text-align: left;
+}
+.Register .mt label, .Register  .tit {
+	width: 100%;
+    font-size: 16px;
+    line-height: normal;
+    color: #2f2f2f;
+    font-weight: 700;
+    margin: 0;
+}
+.Register .form-group input {
+    margin-top: 15px;
+}
+.custom-select {
+	height: 58px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: 1px solid rgba(107,107,107,0.27);
+	font-size: 15px;
+	line-height: normal;
+	color: #000;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	box-shadow: none !important;
+}
+.custom-select-country {
+    height: 58px;
+    width: inherit;
+    border-radius: 5px;
+    border: 1px solid rgba(107,107,107,0.27);
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: none !important;
+    margin-top: 16px;
+}
+.Remeberbox {
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+.Remeberbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.Remeberbox label {
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: normal;
+	color: #34383b;
+	font-weight: 500;
+	margin: 0;
+}
+
+.Remeberbox label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #e39656;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 7px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.Remeberbox input:checked + label:before {
+  background-color: #e39656;
+}
+
+.Remeberbox input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 6px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.forgot {
+    max-width: 530px;
+}
+.Forgot .head {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+
+
+
+/*============ Responsive Css ============*/
+
+@media (max-width: 1199px) {
+	.loginSec .radiobuttons .rdio { width: 50%; min-width: auto; }
+}
+
+@media (max-width: 991px) {
+	.loginSec .head h2 { font-size: 35px; }
+}
+
+
+
+
+
+@media (max-width: 575px) {
+	.loginSec .head h2 { margin-bottom: 5px; }
+	.loginSec .head p { font-size: 13px; line-height: 20px; margin-bottom: 0; }
+	.form-group input { height: 42px; margin-top: 15px; font-size: 13px; }
+	.Register .radiobuttons .rdio, .custom-select { height: 42px; }
+	.Register .radiobuttons .rdio label { line-height: 21px; }
+	.Register .radiobuttons .rdio label:before { top: 11px; }
+	.Register .radiobuttons .rdio input[type="radio"]:checked + label::after { top: 15px; }
+	.custom-btn { min-height: 45px; line-height: 30px; margin-top: 15px !important; }
+}
+
+@media (max-width: 480px) {
+	.iDoinput { padding: 2rem; }
+	.loginSec .head h2 { font-size: 28px; }
+	.Remeberbox label { font-size: 12px; }
+	.forgot .form-group input { margin-bottom: 0 !important; }
+}
+
+@media (max-width: 375px) {
+	.loginSec .head h2 { font-size: 22px; }
+	.radiobuttons { flex-wrap: wrap; }
+	.loginSec .radiobuttons .rdio { width: 100%; margin: 0 0 15px; }
+	.radiobuttons .rdio:last-child { margin-bottom: 0; }
+}

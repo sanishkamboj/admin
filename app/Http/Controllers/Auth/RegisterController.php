@@ -64,6 +64,12 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => [ 'string', 'max:255'],
+            'street' => ['required', 'string', 'max:255'],
+            'city' => [ 'required' , 'string', 'max:255'],
+            'postcode' => ['required', 'string', 'max:255'],
+            'country_id' => ['required', 'integer'],
+            'role_id' => ['required', 'integer'],           
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -78,17 +84,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'title' =>  $data['title'],
-            'first_name' =>  $data['first_name'],
-            'last_name' =>  $data['last_name'],
-            'street' =>  $data['street'],
-            'city' =>  $data['city'],
-            'country_id' =>  $data['country_id'],
-            'postcode' =>  $data['postcode'],
-            'phone'  =>  $data['phone'],
-            'mobile'  =>  $data['mobile'],
-            'role_id' => $data['role_id'],
-            'email'  =>  $data['email'],
+            'title' =>  isset($data['title']) ?  $data['title'] : '',
+            'first_name' =>  isset($data['first_name']) ?  $data['first_name'] : '',
+            'last_name' =>  isset($data['last_name']) ? $data['last_name'] : '',
+            'street' =>  isset($data['street']) ? $data['street'] : '',
+            'city' =>  isset($data['city']) ? $data['city'] : '',
+            'country_id' =>  isset($data['country_id']) ? $data['country_id'] : '',
+            'postcode' =>  isset($data['postcode']) ? $data['postcode'] : '',
+            'phone'  =>  isset($data['phone']) ? $data['phone'] : '',
+            'mobile'  =>  isset($data['mobile']) ? $data['mobile'] : '',
+            'role_id' => isset($data['role_id']) ? $data['role_id'] : '',
+            'email'  =>  isset($data['email']) ? $data['email'] : '',
             'password'  =>  Hash::make($data['password'])
         ]);
     }
