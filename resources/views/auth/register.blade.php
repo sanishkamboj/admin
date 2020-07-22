@@ -27,13 +27,13 @@
               <div class="iDoinput text-left">
                 <label class="tit mb-3">Register As</label>
                 <div class="radiobuttons">
-                  <div class="rdio rdio-primary radio-inline"> <input name="role_id" value="1" id="radio1" type="radio" checked>
-                    <label for="radio1">Artist</label>
-                  </div>
-                  <div class="rdio rdio-primary radio-inline">
-                    <input name="role_id" value="2" id="radio2" type="radio">
-                    <label for="radio2">Customer</label>
-                  </div>
+                  @foreach ($roles as $key=>$role)
+                    <div class="rdio rdio-primary radio-inline"> <input name="role_id" value="{{ $role->id }}" id="radio{{ $role->id }}" type="radio" <?=
+                    ($key==0) ? 'checked' : '' ?>>
+                      <label for="radio{{ $role->id }}">{{ $role->name }}</label>
+                    </div>
+                  @endforeach
+                  
                 </div>
                   <div class="form-row">
                     <div class="form-group col-md-12 mt">
