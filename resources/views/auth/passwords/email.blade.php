@@ -11,7 +11,7 @@
               <p> Please specify your email address and click Submit. We will send you a message with new password. </p>
             </div>
             <div class="iDologin forgot">
-                  @if (session('status'))
+                @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>

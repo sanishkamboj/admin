@@ -9,6 +9,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
+
 
 class RegisterController extends Controller
 {
@@ -51,7 +53,9 @@ class RegisterController extends Controller
     {
         $titles = ['Mr' , 'Mrs' , 'Miss', 'Ms', 'Dr'] ;
         $countries = Country::get(['id','name']);
-        return view('auth.register' , compact('titles', 'countries'));
+        $roles = Role::get(['name', 'id']);
+
+        return view('auth.register' , compact('titles', 'countries' , 'roles'));
     }
 
     /**
@@ -83,7 +87,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        //find the role by id
+        $role = Role::findOrFail($data['role_id']); // select name="role_id" 
+        // $request->role_id or $request->get('role_id') is the same thing.
+
+        $user =  User::create([
             'title' =>  isset($data['title']) ?  $data['title'] : '',
             'first_name' =>  isset($data['first_name']) ?  $data['first_name'] : '',
             'last_name' =>  isset($data['last_name']) ? $data['last_name'] : '',
@@ -97,5 +105,7 @@ class RegisterController extends Controller
             'email'  =>  isset($data['email']) ? $data['email'] : '',
             'password'  =>  Hash::make($data['password'])
         ]);
+        $user->assignRole($role);
+        return $user;
     }
 }

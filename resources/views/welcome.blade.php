@@ -10,121 +10,85 @@
               <span>Book your perfect </span>entertainment
             </h1>
             <p class="sub-text"> We are musicians and industry professionals that have been in the wedding entertainment business for over two decades </p>
-
             <div class="get_box">
-             <div class="panel with-nav-tabs panel-default">
+              <div class="panel with-nav-tabs panel-default">
                 <div class="panel-heading">
-                   <ul class="nav nav-tabs">
-                      <li class="active"><a class="active" href="#tab1default" data-toggle="tab"><img src="{{asset('frontend/assets/img/filter1.png')}}" alt=""> Search By Filters</a></li>
-                      <li class=""><a href="#tab2default" data-toggle="tab"><img src="{{asset('frontend/assets/img/search-icon.png')}}" alt=""> Search By Keyword</a></li>
-                   </ul>
+                 <ul class="nav nav-tabs">
+                    <li class="active"><a class="active" href="#tab1default" data-toggle="tab"><img src="{{asset('frontend/assets/img/filter1.png')}}" alt=""> Search By Filters</a></li>
+                    <li class=""><a href="#tab2default" data-toggle="tab"><img src="{{asset('frontend/assets/img/search-icon.png')}}" alt=""> Search By Keyword</a></li>
+                 </ul>
                 </div>
-
-                
                 <div class="panel-body">
-                   <div class="tab-content">
-                      <div id="tab1default" class="tab-pane tab_first fade active in">
+                  <div class="tab-content">
+                    <div id="tab1default" class="tab-pane tab_first fade active in">
+                     <div class="row">
+                        <div class="col-md-3">
+                          <div class="select-box">
+                            <h6><i class="fa fa-music" aria-hidden="true"></i> Music Style</h6>        
+                            <select class="custom-select">
+                              <option selected>Music Style</option>
+                              <option value="1">Music Style1</option>
+                              <option value="2">Music Style2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="select-box">
+                            <h6><i class="fa fa-calendar-o" aria-hidden="true"></i> Location of Event</h6>        
+                            <select class="custom-select">
+                              <option selected>Acapella Groups</option>
+                              <option value="1">Acapella Groups1</option>
+                              <option value="2">Acapella Groups2</option>
+                            </select>
+                          </div> 
+                        </div>
+                        <div class="col-md-3">
+                          <div class="select-box">
+                            <h6><i class="fa fa-calendar" aria-hidden="true"></i> Date of Event</h6>
+                            <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                              <input placeholder="Northamptonshire" type="text" id="datepicker" class="form-control">
+                            </div>
+                          </div>  
+                        </div>
+                        <div class="col-md-3">
+                          <div class="select-box">
+                            <h6><i class="fa fa-gbp" aria-hidden="true"></i> Price</h6>        
+                            <select class="custom-select">
+                              <option selected>Up to £750</option>
+                              <option value="1">Up to £752</option>
+                              <option value="2">Up to £755</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap">
+                        <button type="button" class="find-btn">Find your entertainment <span>&#10230;</span></button>
+                      </div>
+                    </div>
+                    <div id="tab2default" class="tab-pane fade">
                        <div class="row">
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-music" aria-hidden="true"></i> Music Style</h6>        
-                              <select class="custom-select">
-                                <option selected>Music Style</option>
-                                <option value="1">Music Style1</option>
-                                <option value="2">Music Style2</option>
-                              </select>
+                        <div class="col-md-12">
+                          <div class="select-box">
+                            <h6><i class="fa fa-search" aria-hidden="true"></i> Search</h6>        
+                            <!-- Actual search box -->
+                            <div class="form-group has-search">
+                              <span class="fa fa-search form-control-feedback"></span>
+                              <input type="text" class="form-control" placeholder="Search">
                             </div>
                           </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-calendar-o" aria-hidden="true"></i> Location of Event</h6>        
-                              <select class="custom-select">
-                                <option selected>Acapella Groups</option>
-                                <option value="1">Acapella Groups1</option>
-                                <option value="2">Acapella Groups2</option>
-                              </select>
-                            </div> 
-                          </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-calendar" aria-hidden="true"></i> Date of Event</h6>        
-                              <select class="custom-select">
-                                <option selected>Northamptonshire</option>
-                                <option value="1">Northamptonshire1</option>
-                                <option value="2">Northamptonshire2</option>
-                              </select>
-                            </div>  
-                          </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-gbp" aria-hidden="true"></i> Price</h6>        
-                              <select class="custom-select">
-                                <option selected>Up to £750</option>
-                                <option value="1">Up to £752</option>
-                                <option value="2">Up to £755</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="btn-wrap">
-                          <button type="button" class="find-btn">Find your entertainment <span>&#10230;</span></button>
                         </div>
                       </div>
-                      <div id="tab2default" class="tab-pane fade">
-                         <div class="row">
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-music" aria-hidden="true"></i> Music Style</h6>        
-                              <select class="custom-select">
-                                <option selected>Music Style</option>
-                                <option value="1">Music Style1</option>
-                                <option value="2">Music Style2</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-calendar-o" aria-hidden="true"></i> Location of Event</h6>        
-                              <select class="custom-select">
-                                <option selected>Acapella Groups</option>
-                                <option value="1">Acapella Groups1</option>
-                                <option value="2">Acapella Groups2</option>
-                              </select>
-                            </div> 
-                          </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-calendar" aria-hidden="true"></i> Date of Event</h6>        
-                              <select class="custom-select">
-                                <option selected>Northamptonshire</option>
-                                <option value="1">Northamptonshire1</option>
-                                <option value="2">Northamptonshire2</option>
-                              </select>
-                            </div>  
-                          </div>
-                          <div class="col-md-3">
-                            <div class="select-box">
-                              <h6><i class="fa fa-gbp" aria-hidden="true"></i> Price</h6>        
-                              <select class="custom-select">
-                                <option selected>Up to £750</option>
-                                <option value="1">Up to £752</option>
-                                <option value="2">Up to £755</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="btn-wrap">
-                          <button type="button" class="find-btn">Find your entertainment <span>&#10230;</span></button>
-                        </div>                        
-                      </div>
-                   </div>
+                      <div class="btn-wrap">
+                        <button type="button" class="find-btn">Find your entertainment <span>&#10230;</span></button>
+                      </div>                        
+                    </div>
+                  </div>
                 </div>
-             </div>
+              </div>
             </div>
-
             <div class="contact-us">
-              <p>Call Us Now : <a href="tel:0208 242 4774"> 0208 242 4774</a></p><span class="line"></span>
-              <p>Email: <a href="mailto:Info@idomusic.co.uk">  Info@idomusic.co.uk</a></p>
+              <a href="tel:0208 242 4774">Call Us Now :  0208 242 4774</a><span class="line"></span>
+              <a href="mailto:Info@idomusic.co.uk">Email: Info@idomusic.co.uk</a>
             </div>
 
           </div>
